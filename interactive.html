@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebcd;
+            text-align: center;
+            color: #8b0000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .heart {
+            font-size: 5rem;
+            color: #ff1493;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .heart:hover {
+            transform: scale(1.2);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        #message {
+            font-size: 1.5rem;
+            display: none;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .heart {
+                font-size: 4rem;
+            }
+            #message {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .heart {
+                font-size: 3rem;
+            }
+            #message {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click the heart for a little love 💖</h1>
+        <div class="heart" onclick="showMessage()">❤️</div>
+        <p id="message">I love you more every single day! 💕</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
